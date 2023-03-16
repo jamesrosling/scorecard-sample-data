@@ -1,0 +1,38 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: svc-new-staging-test
+  description: Spring Boot Microservice
+  version: '1.0.0'
+  labels:
+    domain: digital
+    business-unit: tbc
+    itam/name: tbc
+    ability/name: tbc
+    # TODO: Update the Jira Project Key 
+    # TODO: Update Bamboo Deployment Project Key
+    # TODO: Update Newrelic account-id 
+  annotations:
+    gitlab.com/project-slug: 'telstra/git/tplt/tplt-test/svc-new-staging-test'
+    backstage.io/techdocs-ref: dir:.
+    bamboo.atlassian.com/build-plan-key: 'PAYM-SVCNBNACTIVEMS'
+    bamboo.atlassian.com/deployment-project-id: ''
+    bamboo.atlassian.com/project-key: ''
+    sonarqube.org/project-key: 'dummy-svc-new-staging-test'
+    scaffolder-template : 'https://gitlab.tools.telstra.com/telstra/git/tplt/tmpl-svc-springboot-java.git'
+    newrelic.com/account-id: ' 1234'
+    newrelic.com/application-name: 'svc-new-staging-test'
+    pagerduty.com/service-id: ''
+   
+  tags:
+    - springboot
+    - service
+  links:
+    - url: https://confluence.in.telstra.com.au/display/SAT/Best+Practices+-+New+Relic
+      title: NewRelic - Best Practices
+      icon: Link
+spec:
+  type: service
+  owner: 'devex'
+  lifecycle: Production
+
